@@ -34,7 +34,7 @@
             label4 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             buttonClear = new System.Windows.Forms.Button();
-            contactBindingSource = new System.Windows.Forms.DataGridView();
+            DataGridView = new System.Windows.Forms.DataGridView();
             textBoxFullName = new System.Windows.Forms.TextBox();
             textBoxPhone = new System.Windows.Forms.TextBox();
             textBoxEmail = new System.Windows.Forms.TextBox();
@@ -42,9 +42,9 @@
             textBoxSearch = new System.Windows.Forms.TextBox();
             buttonDelete = new System.Windows.Forms.Button();
             buttonUpdate = new System.Windows.Forms.Button();
-            buttonInsert = new System.Windows.Forms.Button();
             buttonNew = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)contactBindingSource).BeginInit();
+            buttonFind = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)DataGridView).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -100,16 +100,17 @@
             buttonClear.TabIndex = 5;
             buttonClear.Text = "Clear";
             buttonClear.UseVisualStyleBackColor = true;
+            buttonClear.Click += buttonClear_Click;
             // 
-            // contactBindingSource
+            // DataGridView
             // 
-            contactBindingSource.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            contactBindingSource.Location = new System.Drawing.Point(63, 338);
-            contactBindingSource.Name = "contactBindingSource";
-            contactBindingSource.RowHeadersWidth = 51;
-            contactBindingSource.RowTemplate.Height = 29;
-            contactBindingSource.Size = new System.Drawing.Size(776, 188);
-            contactBindingSource.TabIndex = 6;
+            DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataGridView.Location = new System.Drawing.Point(63, 338);
+            DataGridView.Name = "DataGridView";
+            DataGridView.RowHeadersWidth = 51;
+            DataGridView.RowTemplate.Height = 29;
+            DataGridView.Size = new System.Drawing.Size(776, 188);
+            DataGridView.TabIndex = 6;
             // 
             // textBoxFullName
             // 
@@ -143,36 +144,28 @@
             // 
             textBoxSearch.Location = new System.Drawing.Point(158, 262);
             textBoxSearch.Name = "textBoxSearch";
-            textBoxSearch.Size = new System.Drawing.Size(681, 27);
+            textBoxSearch.Size = new System.Drawing.Size(562, 27);
             textBoxSearch.TabIndex = 11;
             // 
             // buttonDelete
             // 
-            buttonDelete.Location = new System.Drawing.Point(381, 541);
+            buttonDelete.Location = new System.Drawing.Point(497, 541);
             buttonDelete.Name = "buttonDelete";
             buttonDelete.Size = new System.Drawing.Size(110, 31);
             buttonDelete.TabIndex = 12;
             buttonDelete.Text = "Delete";
             buttonDelete.UseVisualStyleBackColor = true;
+            buttonDelete.Click += buttonDelete_Click;
             // 
             // buttonUpdate
             // 
-            buttonUpdate.Location = new System.Drawing.Point(497, 541);
+            buttonUpdate.Location = new System.Drawing.Point(613, 541);
             buttonUpdate.Name = "buttonUpdate";
             buttonUpdate.Size = new System.Drawing.Size(110, 31);
             buttonUpdate.TabIndex = 13;
             buttonUpdate.Text = "Update";
             buttonUpdate.UseVisualStyleBackColor = true;
-            // 
-            // buttonInsert
-            // 
-            buttonInsert.Location = new System.Drawing.Point(613, 541);
-            buttonInsert.Name = "buttonInsert";
-            buttonInsert.Size = new System.Drawing.Size(110, 31);
-            buttonInsert.TabIndex = 14;
-            buttonInsert.Text = "Insert";
-            buttonInsert.UseVisualStyleBackColor = true;
-            buttonInsert.Click += buttonInsert_Click;
+            buttonUpdate.Click += buttonUpdate_Click;
             // 
             // buttonNew
             // 
@@ -184,13 +177,23 @@
             buttonNew.UseVisualStyleBackColor = true;
             buttonNew.Click += buttonNew_Click;
             // 
+            // buttonFind
+            // 
+            buttonFind.Location = new System.Drawing.Point(729, 262);
+            buttonFind.Name = "buttonFind";
+            buttonFind.Size = new System.Drawing.Size(110, 27);
+            buttonFind.TabIndex = 17;
+            buttonFind.Text = "Find";
+            buttonFind.UseVisualStyleBackColor = true;
+            buttonFind.Click += buttonFind_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(917, 586);
+            Controls.Add(buttonFind);
             Controls.Add(buttonNew);
-            Controls.Add(buttonInsert);
             Controls.Add(buttonUpdate);
             Controls.Add(buttonDelete);
             Controls.Add(textBoxSearch);
@@ -198,7 +201,7 @@
             Controls.Add(textBoxEmail);
             Controls.Add(textBoxPhone);
             Controls.Add(textBoxFullName);
-            Controls.Add(contactBindingSource);
+            Controls.Add(DataGridView);
             Controls.Add(buttonClear);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -208,7 +211,7 @@
             Name = "Form1";
             Text = "                           ";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)contactBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -221,7 +224,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonClear;
-        private System.Windows.Forms.DataGridView contactBindingSource;
+        private System.Windows.Forms.DataGridView DataGridView;
         private System.Windows.Forms.TextBox textBoxFullName;
         private System.Windows.Forms.TextBox textBoxPhone;
         private System.Windows.Forms.TextBox textBoxEmail;
@@ -229,7 +232,7 @@
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonUpdate;
-        private System.Windows.Forms.Button buttonInsert;
         private System.Windows.Forms.Button buttonNew;
+        private System.Windows.Forms.Button buttonFind;
     }
 }
