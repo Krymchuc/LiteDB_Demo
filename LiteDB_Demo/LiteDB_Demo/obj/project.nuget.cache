@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Mvy+TRdJ5dM/e6P6Ry419Z9JfU1gZKT4dvBT7I35Gn13KawyJ1e0MD3Qk+Lu9C5im8tCuD5zyhcwPL6lp7vnGg==",
+  "dgSpecHash": "8a9WRbvckc0Z4uDUQL7sz+vaDsNZklx+Gtc4IZLGTHK7S40atAe0grUasiZLw6AhtjHG3YA4IzwRgFcNQptQWg==",
   "success": true,
   "projectFilePath": "D:\\Users\\Asus\\Documents\\GitHub\\LiteDB_Demo\\LiteDB_Demo\\LiteDB_Demo\\LiteDB_Demo.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\user\\.nuget\\packages\\litedb\\5.0.16\\litedb.5.0.16.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
